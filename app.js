@@ -4,6 +4,7 @@ var main = function() {
         $('<li>').text(post).prependTo('.posts');
         $('.status-box').val('	');
         $('.counter').text('140');
+        $('.btn').addClass('disabled');
     });
 
     $('.status-box').keyup(function() {
