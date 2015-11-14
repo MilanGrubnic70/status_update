@@ -1,14 +1,15 @@
 var main = function() {
     var $btn = $('.btn');
+    var $statusBox = $('.status-box');
     $btn.click(function() {
-        var post = $('.status-box').val();
+        var post = $statusBox.val();
         $('<li>').text(post).prependTo('.posts');
-        $('.status-box').val('	');
+        $statusBox.val('	');
         $('.counter').text('140');
         $btn.addClass('disabled');
     });
 
-    $('.status-box').keyup(function() {
+    $statusBox.keyup(function() {
         var postLength = $(this).val().length;
         var charactersLeft = 140 - postLength;
         $('.counter').text(charactersLeft);
